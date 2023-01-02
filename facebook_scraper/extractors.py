@@ -195,7 +195,7 @@ class PostExtractor:
             try:
                 partial_post = method()
                 if partial_post is None:
-                    log_warning("Extract method %s didn't return anything", method.__name__)
+                    # log_warning("Extract method %s didn't return anything", method.__name__)
                     continue
 
                 post.update(partial_post)

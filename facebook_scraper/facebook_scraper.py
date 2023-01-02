@@ -866,9 +866,9 @@ class FacebookScraper:
 
             if kwargs.get("post"):
                 kwargs.pop("post")
-                response = self.session.post(url=url, **kwargs)
+                response = self.session.post(url=url, verify=False, **kwargs)
             else:
-                response = self.session.get(url=url, **self.requests_kwargs, **kwargs)
+                response = self.session.get(url=url, verify=False, **self.requests_kwargs, **kwargs)
             DEBUG = False
             if DEBUG:
                 for filename in os.listdir("."):
