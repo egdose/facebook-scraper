@@ -872,6 +872,9 @@ class FacebookScraper:
                 response = self.session.post(url=url, verify=False, **kwargs)
             else:
                 response = self.session.get(url=url, verify=False, **self.requests_kwargs, **kwargs)
+
+            # SOME DEBUGGING
+            print(f'>>> REQUEST URL: {url}')
             DEBUG = False
             if DEBUG:
                 for filename in os.listdir("."):
