@@ -14,6 +14,9 @@ import os
 from requests import RequestException
 from requests_html import HTMLSession
 
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 from . import utils
 from .constants import (
     DEFAULT_PAGE_LIMIT,
